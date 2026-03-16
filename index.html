@@ -26,6 +26,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans
 /* HERO */
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:80px 0 60px}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(150deg,#fdf6f0 0%,#f5e8ee 35%,#ede5f0 65%,#e8eef5 100%);z-index:1}
+.hero-cover-blur{position:absolute;inset:0;z-index:2;background-size:cover;background-position:center;filter:blur(60px);opacity:0;transform:scale(1.1);transition:opacity 0.8s ease;pointer-events:none}
+.hero-cover-blur.loaded{opacity:0.35}
+.hero-overlay{position:absolute;inset:0;z-index:3;background:linear-gradient(150deg,rgba(253,246,240,0.82) 0%,rgba(245,232,238,0.78) 35%,rgba(237,229,240,0.75) 65%,rgba(232,238,245,0.82) 100%);pointer-events:none}
 .hero-blob1{position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(176,122,138,0.18) 0%,transparent 65%);z-index:2;pointer-events:none}
 .hero-blob2{position:absolute;bottom:-10%;left:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(138,158,143,0.12) 0%,transparent 65%);z-index:2;pointer-events:none}
 .hero-dots{position:absolute;inset:0;z-index:2;opacity:0.3;background-image:radial-gradient(circle,rgba(176,122,138,0.6) 1px,transparent 1px);background-size:32px 32px}
@@ -140,6 +143,8 @@ footer{border-top:1px solid var(--border-soft);padding:28px 48px;text-align:cent
 
 <section class="hero" id="hero">
   <div class="hero-bg"></div>
+  <div class="hero-cover-blur" id="hero-cover-blur"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-blob1"></div>
   <div class="hero-blob2"></div>
   <div class="hero-dots"></div>
@@ -254,7 +259,14 @@ async function loadSeries(){
     if(d.title){document.getElementById('hero-title').innerHTML=d.title;document.title=d.title;}
     if(d.title_en)document.getElementById('hero-title-en').textContent=d.title_en;
     if(d.synopsis){document.getElementById('hero-synopsis').textContent=d.synopsis;document.getElementById('about-synopsis').textContent=d.synopsis;}
-    if(d.cover_url)document.getElementById('cover-img').innerHTML=`<img src="${d.cover_url}" alt="Cover" loading="eager">`;
+    if(d.cover_url){
+      document.getElementById('cover-img').innerHTML=`<img src="${d.cover_url}" alt="Cover" loading="eager">`;
+      const blur=document.getElementById('hero-cover-blur');
+      blur.style.backgroundImage=`url(${d.cover_url})`;
+      const img=new Image();
+      img.onload=()=>blur.classList.add('loaded');
+      img.src=d.cover_url;
+    }
     if(d.status){document.getElementById('status-badge').textContent=d.status;document.getElementById('about-status').textContent=d.status;document.getElementById('tag-status').textContent=d.status;}
     if(d.genre)document.getElementById('about-genre').textContent=d.genre;
     if(d.update_schedule)document.getElementById('about-schedule').textContent=d.update_schedule;
