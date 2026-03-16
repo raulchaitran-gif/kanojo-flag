@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanojo ga Flag wo Oraretara</title>
+<meta name="description" content="Read Kanojo ga Flag wo Oraretara online. A romance drama series.">
+<meta property="og:title" content="Kanojo ga Flag wo Oraretara">
+<meta property="og:description" content="Read the full series online, free.">
+<meta name="theme-color" content="#b07a8a">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23b07a8a'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' font-family='serif' fill='white'%3E旗%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#b07a8a;--rose-light:#c9959f;--rose-soft:rgba(176,122,138,0.12);
+  --sage:#8a9e8f;--sage-soft:rgba(138,158,143,0.12);
+  --bg:#faf7f5;--bg2:#f4f0ec;--bg3:#ede7e2;
+  --surface:#ffffff;--border:#e4dcd8;--border-soft:#ede7e2;
+  --text:#2d2420;--text-soft:#6b5c57;--muted:#a8978f;
+  --new-bg:#e8f0e8;--new-text:#5a8a5a;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;overflow-x:hidden;font-weight:300}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;padding:80px 0 60px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(150deg,#fdf6f0 0%,#f5e8ee 35%,#ede5f0 65%,#e8eef5 100%);z-index:1}
+.hero-blob1{position:absolute;top:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(176,122,138,0.18) 0%,transparent 65%);z-index:2;pointer-events:none}
+.hero-blob2{position:absolute;bottom:-10%;left:10%;width:500px;height:500px;background:radial-gradient(circle,rgba(138,158,143,0.12) 0%,transparent 65%);z-index:2;pointer-events:none}
+.hero-dots{position:absolute;inset:0;z-index:2;opacity:0.3;background-image:radial-gradient(circle,rgba(176,122,138,0.6) 1px,transparent 1px);background-size:32px 32px}
+.hero-content{position:relative;z-index:10;max-width:1100px;margin:0 auto;padding:0 48px;width:100%;display:grid;grid-template-columns:260px 1fr;gap:72px;align-items:center}
+
+/* COVER */
+.cover-wrap{position:relative;animation:fadeUp 0.7s ease 0.1s both}
+.cover-img{width:260px;aspect-ratio:2/3;background:var(--bg3);border-radius:16px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 24px 60px rgba(176,122,138,0.2),0 8px 24px rgba(0,0,0,0.06)}
+.cover-img img{width:100%;height:100%;object-fit:cover;border-radius:15px}
+.cover-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;width:100%;height:100%;min-height:390px}
+.cover-kanji{font-size:56px;color:var(--rose);line-height:1;opacity:0.45;font-family:'DM Serif Display',serif}
+.cover-badge{position:absolute;top:-10px;right:-10px;background:var(--rose);color:white;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;box-shadow:0 4px 12px rgba(176,122,138,0.35)}
+
+/* HERO TEXT */
+.hero-text{animation:fadeUp 0.7s ease forwards}
+.series-label{font-size:11px;font-weight:500;letter-spacing:0.2em;color:var(--rose);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-label::before{content:'';width:28px;height:1px;background:var(--rose)}
+.series-title-jp{font-family:'DM Serif Display',serif;font-size:clamp(30px,4vw,54px);font-weight:400;line-height:1.15;letter-spacing:-0.01em;color:var(--text);margin-bottom:6px}
+.series-title-en{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(14px,2vw,19px);color:var(--muted);margin-bottom:24px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tag{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:5px 14px;border-radius:20px}
+.tag-genre{background:var(--rose-soft);color:var(--rose)}
+.tag-status{background:var(--sage-soft);color:var(--sage)}
+.synopsis{font-size:16px;line-height:1.9;color:var(--text-soft);max-width:540px;font-weight:300;position:relative;padding-left:18px}
+.synopsis::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--rose),var(--sage));border-radius:2px}
+.hero-meta{display:flex;gap:36px;margin-top:28px}
+.meta-num{font-family:'DM Serif Display',serif;font-size:30px;color:var(--rose);line-height:1}
+.meta-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:3px;font-weight:400}
+.read-btn{display:inline-flex;align-items:center;gap:10px;background:var(--rose);color:white;font-size:13px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:14px 32px;border:none;border-radius:40px;cursor:pointer;transition:all 0.25s;margin-top:28px;text-decoration:none;box-shadow:0 8px 24px rgba(176,122,138,0.35)}
+.read-btn:hover{background:var(--rose-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(176,122,138,0.45)}
+
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--rose));border-radius:1px;animation:scrollPulse 2.5s ease-in-out infinite}
+@keyframes scrollPulse{0%,100%{opacity:0.3}50%{opacity:0.8}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAV */
+.main-nav{background:rgba(250,247,245,0.93);border-bottom:1px solid var(--border-soft);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:15px;color:var(--text);padding:16px 0;text-decoration:none}
+.nav-logo span{color:var(--rose)}
+.nav-tabs{display:flex}
+.nav-tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:16px 18px;cursor:pointer;transition:all 0.2s}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--rose);border-bottom-color:var(--rose)}
+
+/* SECTIONS */
+.section{display:none}.section.visible{display:block}
+.section-wrap{max-width:1100px;margin:0 auto;padding:56px 48px}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px}
+.section-title{font-family:'DM Serif Display',serif;font-size:24px;color:var(--text)}
+.section-count{font-size:12px;color:var(--muted);font-weight:300}
+
+/* CHAPTER LIST */
+.chapter-grid{display:flex;flex-direction:column;gap:8px}
+.chapter-item{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:20px;padding:18px 22px;background:var(--surface);border:1px solid var(--border-soft);border-radius:12px;cursor:pointer;transition:all 0.2s}
+.chapter-item:hover{border-color:var(--rose-light);transform:translateX(4px);box-shadow:0 4px 16px rgba(176,122,138,0.1)}
+.chapter-item.is-new{border-color:rgba(138,158,143,0.4)}
+.ch-num-wrap{width:48px;height:48px;background:var(--bg2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
+.chapter-item:hover .ch-num-wrap{background:var(--rose-soft)}
+.ch-num{font-family:'DM Serif Display',serif;font-size:18px;color:var(--rose)}
+.ch-title{font-size:15px;font-weight:400;color:var(--text);margin-bottom:3px}
+.ch-date{font-size:12px;color:var(--muted);font-weight:300}
+.ch-badge{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.ch-badge-new{background:var(--new-bg);color:var(--new-text)}
+.ch-badge-read{background:var(--bg2);color:var(--muted)}
+
+/* READER */
+.reader-header{background:rgba(250,247,245,0.95);border-bottom:1px solid var(--border-soft);backdrop-filter:blur(12px);padding:14px 48px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:53px;z-index:90}
+.reader-ch-label{font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--rose);text-transform:uppercase;margin-bottom:3px}
+.reader-ch-title{font-family:'DM Serif Display',serif;font-size:17px;color:var(--text)}
+.reader-nav{display:flex;align-items:center;gap:8px}
+.nav-btn{background:var(--surface);border:1px solid var(--border);color:var(--text-soft);font-size:12px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;padding:8px 18px;border-radius:8px;cursor:pointer;transition:all 0.2s}
+.nav-btn:hover:not(:disabled){background:var(--rose);border-color:var(--rose);color:white}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed}
+.chapter-select{background:var(--surface);border:1px solid var(--border);color:var(--text);font-size:12px;padding:8px 14px;border-radius:8px;cursor:pointer;outline:none;max-width:220px}
+.pdf-container{width:100%;min-height:80vh;background:var(--bg2);display:flex;flex-direction:column;align-items:center;padding:40px 20px}
+.pdf-frame{width:100%;max-width:900px;height:85vh;border:none;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,0.08)}
+.pdf-loading,.loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:80px;color:var(--muted)}
+.pdf-spinner,.loading-spinner{width:30px;height:30px;border:1.5px solid var(--border);border-top-color:var(--rose);border-radius:50%;animation:spin 0.9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.about-card{background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;padding:28px}
+.about-card-title{font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border-soft)}
+.about-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--border-soft);font-size:14px}
+.about-row:last-child{border-bottom:none}
+.about-key{color:var(--muted);font-weight:300;font-size:13px}
+.about-val{color:var(--text);font-weight:400;text-align:right}
+.about-synopsis{font-family:'DM Serif Display',serif;font-size:19px;line-height:1.85;color:var(--text-soft);font-style:italic;grid-column:1/-1;background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;padding:36px 40px;border-left:3px solid var(--rose)}
+
+.empty-state{text-align:center;padding:80px 40px;color:var(--muted)}
+.empty-icon{font-size:40px;margin-bottom:16px;opacity:0.4}
+.empty-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text-soft);margin-bottom:8px}
+.empty-desc{font-size:14px;font-weight:300;line-height:1.7}
+
+footer{border-top:1px solid var(--border-soft);padding:28px 48px;text-align:center;font-size:12px;color:var(--muted);letter-spacing:0.05em;max-width:1100px;margin:0 auto;font-weight:300}
+
+@media(max-width:720px){
+  .hero-content{grid-template-columns:1fr;gap:32px;padding:0 24px}
+  .cover-img{width:100%;max-width:200px;margin:0 auto}
+  .cover-wrap{display:flex;justify-content:center}
+  .section-wrap,.reader-header,.nav-inner{padding-left:20px;padding-right:20px}
+  .about-grid{grid-template-columns:1fr}
+  .chapter-item{grid-template-columns:48px 1fr}.ch-badge{display:none}
+  footer{padding-left:20px;padding-right:20px}
+  .hero-dots{display:none}
+}
+</style>
+</head>
+<body>
+
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="cover-wrap">
+      <div class="cover-img" id="cover-img">
+        <div class="cover-placeholder">
+          <div class="cover-kanji">旗</div>
+          <span>Loading cover</span>
+        </div>
+      </div>
+      <div class="cover-badge" id="status-badge">Ongoing</div>
+    </div>
+    <div class="hero-text">
+      <div class="series-label">Series</div>
+      <h1 class="series-title-jp" id="hero-title">Kanojo ga Flag wo<br>Oraretara</h1>
+      <div class="series-title-en" id="hero-title-en">If Her Flag Breaks</div>
+      <div class="tags">
+        <span class="tag tag-genre">Romance</span>
+        <span class="tag tag-genre">Drama</span>
+        <span class="tag tag-status" id="tag-status">Ongoing</span>
+      </div>
+      <p class="synopsis" id="hero-synopsis">A young man who can see the flags of fate — symbols that determine the destiny of those around him — must navigate love, loss and the invisible threads that bind every heart. Every flag he breaks changes everything.</p>
+      <div class="hero-meta">
+        <div class="meta-item"><div class="meta-num" id="meta-chapters">—</div><div class="meta-label">Chapters</div></div>
+        <div class="meta-item"><div class="meta-num" id="meta-latest">—</div><div class="meta-label">Latest</div></div>
+      </div>
+      <button class="read-btn" onclick="startReading()">▶ &nbsp;Start Reading</button>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div></div>
+</section>
+
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#"><span>旗</span> Kanojo Flag</a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('chapters',this)">Chapters</button>
+      <button class="nav-tab" onclick="showSection('about',this)">About</button>
+    </div>
+  </div>
+</nav>
+
+<div id="section-chapters" class="section visible">
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-title">All Chapters</div>
+      <div class="section-count" id="chapter-count"></div>
+    </div>
+    <div id="chapter-list">
+      <div class="loading-state"><div class="loading-spinner"></div><span style="font-size:13px">Loading chapters...</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="section-reader" class="section">
+  <div class="reader-header">
+    <div><div class="reader-ch-label">Now Reading</div><div class="reader-ch-title" id="reader-title">Chapter —</div></div>
+    <div class="reader-nav">
+      <button class="nav-btn" id="btn-prev" onclick="changeChapter(-1)" disabled>← Prev</button>
+      <select class="chapter-select" id="chapter-select" onchange="openChapterByIndex(this.value)"></select>
+      <button class="nav-btn" id="btn-next" onclick="changeChapter(1)">Next →</button>
+      <button class="nav-btn" onclick="showSection('chapters',document.querySelector('.nav-tab'))">☰ List</button>
+    </div>
+  </div>
+  <div class="pdf-container">
+    <div id="pdf-viewer" style="width:100%;max-width:900px">
+      <div class="pdf-loading"><div class="pdf-spinner"></div><span style="font-size:13px">Loading...</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="section-about" class="section">
+  <div class="section-wrap">
+    <div class="section-header"><div class="section-title">About the Series</div></div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-title">Series Info</div>
+        <div class="about-row"><span class="about-key">Title</span><span class="about-val">Kanojo ga Flag wo Oraretara</span></div>
+        <div class="about-row"><span class="about-key">English</span><span class="about-val">If Her Flag Breaks</span></div>
+        <div class="about-row"><span class="about-key">Genre</span><span class="about-val" id="about-genre">Romance, Drama</span></div>
+        <div class="about-row"><span class="about-key">Status</span><span class="about-val" id="about-status">Ongoing</span></div>
+        <div class="about-row"><span class="about-key">Chapters</span><span class="about-val" id="about-chapters">—</span></div>
+        <div class="about-row"><span class="about-key">Last updated</span><span class="about-val" id="about-updated">—</span></div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-title">Reading Guide</div>
+        <div class="about-row"><span class="about-key">Format</span><span class="about-val">PDF per chapter</span></div>
+        <div class="about-row"><span class="about-key">Reading order</span><span class="about-val">Chapter 1 → Latest</span></div>
+        <div class="about-row"><span class="about-key">New chapters</span><span class="about-val" id="about-schedule">Check back regularly</span></div>
+        <div class="about-row"><span class="about-key">Progress saved</span><span class="about-val">In your browser</span></div>
+        <div class="about-row"><span class="about-key">Mobile friendly</span><span class="about-val">Yes ✓</span></div>
+      </div>
+      <div class="about-synopsis" id="about-synopsis">A young man who can see the flags of fate — symbols that determine the destiny of those around him — must navigate love, loss and the invisible threads that bind every heart.</div>
+    </div>
+  </div>
+</div>
+
+<footer>Kanojo ga Flag wo Oraretara &nbsp;·&nbsp; Hosted on Supabase &nbsp;·&nbsp; Read free online</footer>
+
+<script>
+const API='/api/data';
+let chapters=[],currentIndex=0;
+
+async function init(){await Promise.all([loadSeries(),loadChapters()]);}
+
+async function loadSeries(){
+  try{
+    const r=await fetch(`${API}?type=series`);
+    const d=await r.json();
+    if(!d)return;
+    if(d.title){document.getElementById('hero-title').innerHTML=d.title;document.title=d.title;}
+    if(d.title_en)document.getElementById('hero-title-en').textContent=d.title_en;
+    if(d.synopsis){document.getElementById('hero-synopsis').textContent=d.synopsis;document.getElementById('about-synopsis').textContent=d.synopsis;}
+    if(d.cover_url)document.getElementById('cover-img').innerHTML=`<img src="${d.cover_url}" alt="Cover" loading="eager">`;
+    if(d.status){document.getElementById('status-badge').textContent=d.status;document.getElementById('about-status').textContent=d.status;document.getElementById('tag-status').textContent=d.status;}
+    if(d.genre)document.getElementById('about-genre').textContent=d.genre;
+    if(d.update_schedule)document.getElementById('about-schedule').textContent=d.update_schedule;
+  }catch(e){console.warn(e);}
+}
+
+async function loadChapters(){
+  const list=document.getElementById('chapter-list');
+  try{
+    const r=await fetch(`${API}?type=chapters`);
+    chapters=await r.json();
+    if(!chapters||chapters.length===0){
+      list.innerHTML=`<div class="empty-state"><div class="empty-icon">📖</div><div class="empty-title">No chapters yet</div><div class="empty-desc">Chapters will appear here once published.<br>Check back soon!</div></div>`;
+      return;
+    }
+    document.getElementById('meta-chapters').textContent=chapters.length;
+    document.getElementById('meta-latest').textContent=`Ch.${chapters[chapters.length-1].number}`;
+    document.getElementById('about-chapters').textContent=chapters.length;
+    document.getElementById('about-updated').textContent=fmtDate(chapters[chapters.length-1].published_at);
+    document.getElementById('chapter-count').textContent=`${chapters.length} chapter${chapters.length!==1?'s':''}`;
+    const readSet=getRead();
+    const sorted=[...chapters].reverse();
+    list.innerHTML=`<div class="chapter-grid">${sorted.map(ch=>{
+      const idx=chapters.indexOf(ch);
+      const isNew=isNewCh(ch.published_at);
+      const isRead=readSet.has(ch.number);
+      return`<div class="chapter-item${isNew?' is-new':''}" onclick="openChapter(${idx})">
+        <div class="ch-num-wrap"><div class="ch-num">${ch.number}</div></div>
+        <div><div class="ch-title">${ch.title||`Chapter ${ch.number}`}</div><div class="ch-date">${fmtDate(ch.published_at)}</div></div>
+        ${isNew?'<span class="ch-badge ch-badge-new">New</span>':isRead?'<span class="ch-badge ch-badge-read">Read</span>':'<span></span>'}
+      </div>`;
+    }).join('')}</div>`;
+    const sel=document.getElementById('chapter-select');
+    sel.innerHTML=chapters.map((ch,i)=>`<option value="${i}">Chapter ${ch.number}${ch.title?' — '+ch.title:''}</option>`).join('');
+  }catch(e){
+    list.innerHTML=`<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Connection error</div><div class="empty-desc">Could not load chapters. Check Supabase config.</div></div>`;
+    console.error(e);
+  }
+}
+
+function openChapter(index){
+  currentIndex=index;
+  const ch=chapters[index];
+  if(!ch)return;
+  markRead(ch.number);
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('visible'));
+  document.getElementById('section-reader').classList.add('visible');
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('reader-title').textContent=`Chapter ${ch.number}${ch.title?' — '+ch.title:''}`;
+  document.getElementById('chapter-select').value=index;
+  document.getElementById('btn-prev').disabled=index===0;
+  document.getElementById('btn-next').disabled=index===chapters.length-1;
+  const v=document.getElementById('pdf-viewer');
+  if(!ch.pdf_url){v.innerHTML=`<div class="empty-state"><div class="empty-icon">📄</div><div class="empty-title">Not available yet</div><div class="empty-desc">PDF hasn't been uploaded for this chapter.</div></div>`;return;}
+  v.innerHTML=`<div class="pdf-loading"><div class="pdf-spinner"></div><span style="font-size:13px">Loading chapter ${ch.number}...</span></div>`;
+  setTimeout(()=>{v.innerHTML=`<iframe class="pdf-frame" src="${ch.pdf_url}" title="Chapter ${ch.number}"></iframe>`;},300);
+  document.querySelector('.main-nav').scrollIntoView({behavior:'smooth'});
+}
+
+function openChapterByIndex(i){openChapter(parseInt(i));}
+function changeChapter(dir){const n=currentIndex+dir;if(n>=0&&n<chapters.length)openChapter(n);}
+function startReading(){
+  if(!chapters.length){document.getElementById('section-chapters').scrollIntoView({behavior:'smooth'});return;}
+  const readSet=getRead();
+  let start=0;
+  for(let i=chapters.length-1;i>=0;i--){if(readSet.has(chapters[i].number)){start=Math.min(i+1,chapters.length-1);break;}}
+  openChapter(start);
+}
+function showSection(name,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('visible'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('section-'+name).classList.add('visible');
+  if(btn)btn.classList.add('active');
+  document.querySelector('.main-nav').scrollIntoView({behavior:'smooth'});
+}
+function getRead(){try{return new Set(JSON.parse(localStorage.getItem('kanojo_read')||'[]'));}catch{return new Set();}}
+function markRead(n){try{const s=getRead();s.add(n);localStorage.setItem('kanojo_read',JSON.stringify([...s]));}catch{}}
+function fmtDate(s){if(!s)return'—';try{return new Date(s).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch{return s;}}
+function isNewCh(d){if(!d)return false;try{return Date.now()-new Date(d).getTime()<7*24*60*60*1000;}catch{return false;}}
+
+init();
+</script>
+</body>
+</html>
